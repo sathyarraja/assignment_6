@@ -70,17 +70,17 @@ def get_silver_path(entity: str) -> str:
 
 def standardize_dates(df: DataFrame, date_cols: list) -> DataFrame:
     """
-    Cast date/timestamp string columns to proper TimestampType (ISO format).
-    Handles common formats: 'yyyy-MM-dd HH:mm:ss', 'yyyy-MM-dd', 'MM/dd/yyyy'
+    Cast date/timestamp string columns to proper TimestampType.
+    Uses try_to_timestamp to handle both datetime and date-only strings.
     """
     for col in date_cols:
         if col in df.columns:
             df = df.withColumn(
                 col,
                 F.coalesce(
-                    F.to_timestamp(F.col(col), "yyyy-MM-dd HH:mm:ss"),
-                    F.to_timestamp(F.col(col), "yyyy-MM-dd"),
-                    F.to_timestamp(F.col(col), "MM/dd/yyyy"),
+                    F.expr(f"try_to_timestamp(`{col}`, 'yyyy-MM-dd HH:mm:ss')"),
+                    F.expr(f"try_to_timestamp(`{col}`, 'yyyy-MM-dd')"),
+                    F.expr(f"try_to_timestamp(`{col}`, 'MM/dd/yyyy')"),
                 )
             )
     return df
