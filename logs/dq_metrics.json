@@ -1,0 +1,60 @@
+[
+  {
+    "table_name": "silver_ratings",
+    "check_date": "2026-03-16",
+    "total_rows": 609,
+    "null_counts": {
+      "user_id": 9,
+      "movie_id": 9,
+      "rating": 9
+    },
+    "range_fails": {
+      "rating": 0
+    },
+    "referential_fails": {},
+    "duplicate_count": 417,
+    "total_failed": 444,
+    "passed": false
+  },
+  {
+    "table_name": "silver_movies",
+    "check_date": "2026-03-16",
+    "total_rows": 90,
+    "null_counts": {
+      "movie_id": 0,
+      "title": 0
+    },
+    "range_fails": {},
+    "referential_fails": {},
+    "duplicate_count": 0,
+    "total_failed": 0,
+    "passed": true
+  },
+  {
+    "table_name": "silver_users",
+    "check_date": "2026-03-16",
+    "total_rows": 150,
+    "null_counts": {
+      "user_id": 0
+    },
+    "range_fails": {},
+    "referential_fails": {},
+    "duplicate_count": 0,
+    "total_failed": 0,
+    "passed": true
+  },
+  {
+    "table_name": "silver_ratings_ref",
+    "check_date": "2026-03-16",
+    "total_rows": 192,
+    "null_counts": {},
+    "range_fails": {},
+    "referential_fails": {
+      "user_id_orphans": 1,
+      "movie_id_orphans": 1
+    },
+    "duplicate_count": 0,
+    "total_failed": 2,
+    "passed": false
+  }
+]

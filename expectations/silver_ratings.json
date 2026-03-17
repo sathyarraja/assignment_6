@@ -1,0 +1,66 @@
+{
+  "suite_name": "silver_ratings",
+  "run_date": "2026-03-16T14:15:03.175476",
+  "total_rows": 50,
+  "total_checks": 6,
+  "passed": 5,
+  "failed": 1,
+  "success_pct": 83.3,
+  "overall_pass": false,
+  "results": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "user_id",
+      "passed": true,
+      "observed_value": "0 nulls (0.0%)",
+      "expected_value": "0 nulls",
+      "details": "0 null values found in 'user_id'",
+      "checked_at": "2026-03-16T14:15:03.032767"
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "movie_id",
+      "passed": true,
+      "observed_value": "0 nulls (0.0%)",
+      "expected_value": "0 nulls",
+      "details": "0 null values found in 'movie_id'",
+      "checked_at": "2026-03-16T14:15:03.064067"
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "rating",
+      "passed": true,
+      "observed_value": "0 nulls (0.0%)",
+      "expected_value": "0 nulls",
+      "details": "0 null values found in 'rating'",
+      "checked_at": "2026-03-16T14:15:03.097502"
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "column": "rating",
+      "passed": true,
+      "observed_value": "0 out-of-range values",
+      "expected_value": "all values in [1.0, 5.0]",
+      "details": "0 values outside [1.0, 5.0]",
+      "checked_at": "2026-03-16T14:15:03.127455"
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "column": "user_id+movie_id",
+      "passed": true,
+      "observed_value": "0 duplicate keys",
+      "expected_value": "0 duplicate keys",
+      "details": "0 duplicate (user_id+movie_id) combinations found",
+      "checked_at": "2026-03-16T14:15:03.175458"
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "column": null,
+      "passed": false,
+      "observed_value": 50,
+      "expected_value": "[100, 10000000]",
+      "details": "Row count 50 out of range",
+      "checked_at": "2026-03-16T14:15:03.175467"
+    }
+  ]
+}

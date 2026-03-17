@@ -1,0 +1,56 @@
+
+# config/dq_rules.yaml
+# Data Quality Rules for Netflix Medallion Pipeline
+# Each table defines: not_null, range, unique, and custom SQL checks
+
+version: "1.0"
+tables:
+
+  silver_ratings:
+    not_null:
+      - user_id
+      - movie_id
+      - rating
+    range:
+      - column: rating
+        min: 1.0
+        max: 5.0
+    unique:
+      - [user_id, movie_id]
+    thresholds:
+      max_null_pct:      5.0
+      max_duplicate_pct: 1.0
+      min_row_count:     100
+
+  silver_movies:
+    not_null:
+      - movie_id
+      - title
+    unique:
+      - [movie_id]
+    thresholds:
+      max_null_pct:  0.0
+      min_row_count: 10
+
+  silver_users:
+    not_null:
+      - user_id
+    unique:
+      - [user_id]
+    thresholds:
+      max_null_pct:  0.0
+      min_row_count: 10
+
+  fact_ratings:
+    not_null:
+      - user_id
+      - movie_id
+      - rating_date
+      - rating
+    range:
+      - column: rating
+        min: 1.0
+        max: 5.0
+    thresholds:
+      max_null_pct:  0.0
+      min_row_count: 50

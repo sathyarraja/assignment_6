@@ -1,0 +1,25 @@
+{
+  "full_refresh": {
+    "rows_processed": 193,
+    "rows_written": 193,
+    "elapsed_seconds": 0.315,
+    "cost_proxy": 193
+  },
+  "incremental": {
+    "rows_processed": 38,
+    "rows_written": 192,
+    "elapsed_seconds": 0.55,
+    "cost_proxy": 38
+  },
+  "accuracy": {
+    "full_output_rows": 193,
+    "incremental_output_rows": 192,
+    "row_counts_match": false
+  },
+  "summary": {
+    "speedup_factor": 0.57,
+    "cost_savings_pct": 80.3,
+    "recommendation": "full_refresh",
+    "timestamp": "2026-03-16T13:19:02.884187"
+  }
+}

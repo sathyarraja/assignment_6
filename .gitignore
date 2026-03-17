@@ -1,0 +1,36 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Spark
+derby.log
+metastore_db/
+spark-warehouse/
+
+# Data (too large for git)
+data/raw/
+bronze/
+silver/
+gold/
+
+# Airflow
+logs/scheduler/
+logs/dag_processor_manager/
+airflow.db
+airflow.cfg
+webserver_config.py
+standalone_admin_password.txt
+
+# Keep these log files
+!logs/watermarks.json
+!logs/checkpoints.json
+!logs/dq_metrics.json
+!logs/dq_results.json
+!logs/reports/
+
+# OS
+.DS_Store
+*.swp

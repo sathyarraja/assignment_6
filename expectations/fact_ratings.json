@@ -1,0 +1,66 @@
+{
+  "suite_name": "fact_ratings",
+  "run_date": "2026-03-16T14:09:55.395240",
+  "total_rows": 193,
+  "total_checks": 6,
+  "passed": 2,
+  "failed": 4,
+  "success_pct": 33.3,
+  "overall_pass": false,
+  "results": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "user_id",
+      "passed": false,
+      "observed_value": "2 nulls (1.04%)",
+      "expected_value": "0 nulls",
+      "details": "2 null values found in 'user_id'",
+      "checked_at": "2026-03-16T14:09:55.174963"
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "movie_id",
+      "passed": false,
+      "observed_value": "2 nulls (1.04%)",
+      "expected_value": "0 nulls",
+      "details": "2 null values found in 'movie_id'",
+      "checked_at": "2026-03-16T14:09:55.258388"
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "rating_date",
+      "passed": false,
+      "observed_value": "column_missing",
+      "expected_value": "column_exists",
+      "details": "Column 'rating_date' does not exist",
+      "checked_at": "2026-03-16T14:09:55.258399"
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "rating",
+      "passed": false,
+      "observed_value": "2 nulls (1.04%)",
+      "expected_value": "0 nulls",
+      "details": "2 null values found in 'rating'",
+      "checked_at": "2026-03-16T14:09:55.326601"
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "column": "rating",
+      "passed": true,
+      "observed_value": "0 out-of-range values",
+      "expected_value": "all values in [1.0, 5.0]",
+      "details": "0 values outside [1.0, 5.0]",
+      "checked_at": "2026-03-16T14:09:55.395221"
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "column": null,
+      "passed": true,
+      "observed_value": 193,
+      "expected_value": "[50, 10000000]",
+      "details": "Row count 193 ok",
+      "checked_at": "2026-03-16T14:09:55.395230"
+    }
+  ]
+}

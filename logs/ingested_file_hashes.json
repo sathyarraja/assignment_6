@@ -1,0 +1,22 @@
+{
+  "40c66a8a3b2719f41dec9643474e3e49": {
+    "file_path": "/Users/sathyar/netflix_pipeline/data/raw/ratings_1.csv",
+    "job_run_id": "63787da4-59cb-4b0b-9de7-02cabfee4977",
+    "ingested_at": "2026-03-16T10:29:11.098355"
+  },
+  "3e7096b431190b61e359f0771dcfb852": {
+    "file_path": "/Users/sathyar/netflix_pipeline/data/raw/movies.json",
+    "job_run_id": "1f732bf0-919a-4819-a893-05ea15622df6",
+    "ingested_at": "2026-03-16T10:29:11.311897"
+  },
+  "f1e2139cc97daefd8d0ad9c1ce5da5f8": {
+    "file_path": "/Users/sathyar/netflix_pipeline/data/raw/users/users.parquet",
+    "job_run_id": "f5dc3512-ade0-4a5d-b4f2-b609d33f4c9e",
+    "ingested_at": "2026-03-16T10:29:11.575147"
+  },
+  "bb43bc23568ba89cc0501ec6bb0de709": {
+    "file_path": "/Users/sathyar/netflix_pipeline/data/raw/ratings_bad.csv",
+    "job_run_id": "6927e72a-a4fb-4f04-8b47-d48cb08b7c86",
+    "ingested_at": "2026-03-16T10:29:11.789162"
+  }
+}

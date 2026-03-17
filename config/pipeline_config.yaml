@@ -1,0 +1,78 @@
+# config/pipeline_config.yaml
+# ─────────────────────────────────────────────────────────────────────────────
+# Central configuration for the Netflix Medallion Pipeline.
+# All paths are relative to the project root.
+# ─────────────────────────────────────────────────────────────────────────────
+
+project:
+  name: netflix_medallion_pipeline
+  version: "1.0"
+
+paths:
+  raw_data:   data/raw
+  bronze:     bronze
+  silver:     silver
+  gold:       gold
+  logs:       logs
+  quarantine: bronze/quarantine
+
+spark:
+  app_name:          NetflixMedallionPipeline
+  driver_memory:     4g
+  shuffle_partitions: 8
+  log_level:         WARN
+
+sources:
+  netflix_ratings:
+    source:  netflix
+    entity:  ratings
+    format:  csv
+    schema:
+      user_id:  integer
+      movie_id: integer
+      rating:   float
+      rated_at: string
+
+  tmdb_movies:
+    source:  tmdb
+    entity:  movies
+    format:  json
+    schema:
+      movie_id: integer
+      title:    string
+      genres:   string
+      year:     integer
+      language: string
+      country:  string
+
+  netflix_users:
+    source:  netflix
+    entity:  users
+    format:  parquet
+    schema:
+      user_id:     integer
+      signup_date: string
+      country:     string
+      plan:        string
+
+bronze:
+  output_format:  parquet
+  compression:    snappy
+  hash_registry:  logs/ingested_file_hashes.json
+  error_log:      logs/quarantine_errors.json
+
+silver:
+  dedup_strategy:    keep_latest          # keep latest record per key
+  date_format:       "%Y-%m-%d %H:%M:%S"
+  iso_date_format:   "yyyy-MM-dd HH:mm:ss"
+  quality_log:       logs/dq_metrics.json
+
+gold:
+  retention_months:  12
+  top_n_movies:      100
+
+airflow:
+  schedule:      "0 2 * * *"    # 2 AM daily
+  sla_minutes:   420             # gold must be ready by 9 AM (7h after start)
+  retries:       3
+  retry_delay_minutes: 5

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pipeline Monitoring Dashboard</title>
+<style>
+  body  { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+           padding:24px;background:#f5f5f5;color:#333; }
+  h1    { font-size:22px;font-weight:600;margin-bottom:4px; }
+  .sub  { color:#888;font-size:13px;margin-bottom:20px; }
+  .cards{ display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap; }
+  .card { background:#fff;border-radius:10px;padding:16px 20px;
+           min-width:150px;box-shadow:0 1px 3px rgba(0,0,0,0.08); }
+  .card .v { font-size:28px;font-weight:700; }
+  .card .l { font-size:12px;color:#888;margin-top:2px; }
+  .wrap { background:#fff;border-radius:10px;padding:20px;
+           box-shadow:0 1px 3px rgba(0,0,0,0.08);overflow-x:auto; }
+  table { width:100%;border-collapse:collapse;font-size:14px; }
+  th    { background:#f8f8f8;padding:8px 12px;text-align:left;
+           font-weight:500;border-bottom:2px solid #e8e8e8; }
+  td    { padding:8px 12px;border-bottom:1px solid #f0f0f0; }
+</style>
+</head>
+<body>
+<h1>Pipeline Monitoring Dashboard</h1>
+<div class="sub">Last updated: 2026-03-17 04:30 UTC</div>
+<div class="cards">
+  <div class="card"><div class="v">5</div>
+    <div class="l">Total task runs</div></div>
+  <div class="card"><div class="v" style="color:#1D9E75">5</div>
+    <div class="l">Successful</div></div>
+  <div class="card"><div class="v" style="color:#E24B4A">0</div>
+    <div class="l">Failed</div></div>
+  <div class="card"><div class="v">500</div>
+    <div class="l">Total rows processed</div></div>
+  <div class="card"><div class="v">1.0s</div>
+    <div class="l">Avg task duration</div></div>
+</div>
+<div class="wrap">
+<table>
+  <thead>
+    <tr><th>Task</th><th>Status</th><th>Rows</th>
+        <th>Duration</th><th>Recorded at</th></tr>
+  </thead>
+  <tbody>
+        <tr>
+          <td>task_0</td>
+          <td style="color:#1D9E75;font-weight:500">success</td>
+          <td>100</td>
+          <td>1.0s</td>
+          <td>2024-01-01 00:00:00</td>
+        </tr>
+        <tr>
+          <td>task_1</td>
+          <td style="color:#1D9E75;font-weight:500">success</td>
+          <td>100</td>
+          <td>1.0s</td>
+          <td>2024-01-01 00:00:00</td>
+        </tr>
+        <tr>
+          <td>task_2</td>
+          <td style="color:#1D9E75;font-weight:500">success</td>
+          <td>100</td>
+          <td>1.0s</td>
+          <td>2024-01-01 00:00:00</td>
+        </tr>
+        <tr>
+          <td>task_3</td>
+          <td style="color:#1D9E75;font-weight:500">success</td>
+          <td>100</td>
+          <td>1.0s</td>
+          <td>2024-01-01 00:00:00</td>
+        </tr>
+        <tr>
+          <td>task_4</td>
+          <td style="color:#1D9E75;font-weight:500">success</td>
+          <td>100</td>
+          <td>1.0s</td>
+          <td>2024-01-01 00:00:00</td>
+        </tr></tbody>
+</table>
+</div>
+</body>
+</html>

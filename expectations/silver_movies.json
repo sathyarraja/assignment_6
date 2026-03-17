@@ -1,0 +1,48 @@
+{
+  "suite_name": "silver_movies",
+  "run_date": "2026-03-16T14:09:55.011579",
+  "total_rows": 30,
+  "total_checks": 4,
+  "passed": 4,
+  "failed": 0,
+  "success_pct": 100.0,
+  "overall_pass": true,
+  "results": [
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "movie_id",
+      "passed": true,
+      "observed_value": "0 nulls (0.0%)",
+      "expected_value": "0 nulls",
+      "details": "0 null values found in 'movie_id'",
+      "checked_at": "2026-03-16T14:09:54.914868"
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "title",
+      "passed": true,
+      "observed_value": "0 nulls (0.0%)",
+      "expected_value": "0 nulls",
+      "details": "0 null values found in 'title'",
+      "checked_at": "2026-03-16T14:09:54.947314"
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_unique",
+      "column": "movie_id",
+      "passed": true,
+      "observed_value": "0 duplicate keys",
+      "expected_value": "0 duplicate keys",
+      "details": "0 duplicate (movie_id) combinations found",
+      "checked_at": "2026-03-16T14:09:55.011559"
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "column": null,
+      "passed": true,
+      "observed_value": 30,
+      "expected_value": "[10, 10000000]",
+      "details": "Row count 30 ok",
+      "checked_at": "2026-03-16T14:09:55.011568"
+    }
+  ]
+}
