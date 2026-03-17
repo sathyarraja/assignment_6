@@ -1,6 +1,6 @@
 {
   "suite_name": "test",
-  "run_date": "2026-03-16T14:15:03.251213",
+  "run_date": "2026-03-17T13:18:00.833112",
   "total_rows": 2,
   "total_checks": 2,
   "passed": 1,
@@ -15,7 +15,7 @@
       "observed_value": "0 nulls (0.0%)",
       "expected_value": "0 nulls",
       "details": "0 null values found in 'user_id'",
-      "checked_at": "2026-03-16T14:15:03.228629"
+      "checked_at": "2026-03-17T13:18:00.806299"
     },
     {
       "expectation_type": "expect_column_values_to_be_between",
@@ -24,7 +24,7 @@
       "observed_value": "1 out-of-range values",
       "expected_value": "all values in [1.0, 5.0]",
       "details": "1 values outside [1.0, 5.0]",
-      "checked_at": "2026-03-16T14:15:03.251201"
+      "checked_at": "2026-03-17T13:18:00.833100"
     }
   ]
 }

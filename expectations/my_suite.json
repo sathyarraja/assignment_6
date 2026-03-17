@@ -1,6 +1,6 @@
 {
   "suite_name": "my_suite",
-  "run_date": "2026-03-16T14:15:02.963662",
+  "run_date": "2026-03-17T13:18:00.582349",
   "total_rows": 1,
   "total_checks": 1,
   "passed": 1,
@@ -15,7 +15,7 @@
       "observed_value": "0 nulls (0.0%)",
       "expected_value": "0 nulls",
       "details": "0 null values found in 'user_id'",
-      "checked_at": "2026-03-16T14:15:02.963651"
+      "checked_at": "2026-03-17T13:18:00.582339"
     }
   ]
 }

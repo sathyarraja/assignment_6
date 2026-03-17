@@ -1,6 +1,6 @@
 {
   "suite_name": "silver_ratings",
-  "run_date": "2026-03-16T14:15:03.175476",
+  "run_date": "2026-03-17T13:18:00.758763",
   "total_rows": 50,
   "total_checks": 6,
   "passed": 5,
@@ -15,7 +15,7 @@
       "observed_value": "0 nulls (0.0%)",
       "expected_value": "0 nulls",
       "details": "0 null values found in 'user_id'",
-      "checked_at": "2026-03-16T14:15:03.032767"
+      "checked_at": "2026-03-17T13:18:00.635268"
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
@@ -24,7 +24,7 @@
       "observed_value": "0 nulls (0.0%)",
       "expected_value": "0 nulls",
       "details": "0 null values found in 'movie_id'",
-      "checked_at": "2026-03-16T14:15:03.064067"
+      "checked_at": "2026-03-17T13:18:00.664318"
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
@@ -33,7 +33,7 @@
       "observed_value": "0 nulls (0.0%)",
       "expected_value": "0 nulls",
       "details": "0 null values found in 'rating'",
-      "checked_at": "2026-03-16T14:15:03.097502"
+      "checked_at": "2026-03-17T13:18:00.691974"
     },
     {
       "expectation_type": "expect_column_values_to_be_between",
@@ -42,7 +42,7 @@
       "observed_value": "0 out-of-range values",
       "expected_value": "all values in [1.0, 5.0]",
       "details": "0 values outside [1.0, 5.0]",
-      "checked_at": "2026-03-16T14:15:03.127455"
+      "checked_at": "2026-03-17T13:18:00.720009"
     },
     {
       "expectation_type": "expect_column_values_to_be_unique",
@@ -51,7 +51,7 @@
       "observed_value": "0 duplicate keys",
       "expected_value": "0 duplicate keys",
       "details": "0 duplicate (user_id+movie_id) combinations found",
-      "checked_at": "2026-03-16T14:15:03.175458"
+      "checked_at": "2026-03-17T13:18:00.758744"
     },
     {
       "expectation_type": "expect_table_row_count_to_be_between",
@@ -60,7 +60,7 @@
       "observed_value": 50,
       "expected_value": "[100, 10000000]",
       "details": "Row count 50 out of range",
-      "checked_at": "2026-03-16T14:15:03.175467"
+      "checked_at": "2026-03-17T13:18:00.758754"
     }
   ]
 }
